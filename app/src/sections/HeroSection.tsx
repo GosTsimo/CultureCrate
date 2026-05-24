@@ -58,28 +58,28 @@ export default function HeroSection() {
   const slide = heroSlides[currentSlide];
 
   return (
-    <section className="relative w-full min-h-screen flex flex-col lg:flex-row overflow-hidden bg-[#14213d]">
+    <section className="relative w-full min-h-[100svh] flex flex-col lg:flex-row overflow-hidden bg-[#14213d]">
       {/* Particle Background behind everything */}
       <div className="absolute inset-0 z-0">
         <ParticleField />
       </div>
 
       {/* Left Content Side */}
-      <div className="lg:w-[45%] w-full relative z-10 flex flex-col justify-center px-8 sm:px-12 lg:px-20 xl:px-28 py-20 lg:py-0 mt-16 lg:mt-0">
-        <div key={currentSlide} className="animate-fade-in-up max-w-xl">
-          <p className="font-body text-[#BC9B70] text-sm md:text-sm font-bold tracking-[0.25em] uppercase mb-6">
+      <div className="w-full lg:w-[45%] relative z-10 flex flex-col justify-center px-6 sm:px-12 lg:px-20 xl:px-28 pb-32 pt-28 lg:py-0 min-h-[100svh] lg:min-h-screen">
+        <div key={currentSlide} className="animate-fade-in-up max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
+          <p className="font-body text-[#BC9B70] text-xs sm:text-sm font-bold tracking-[0.25em] uppercase mb-4 sm:mb-6">
             {slide.subtitle}
           </p>
-          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-[#F9F7F2] leading-[1.1] mb-6 drop-shadow-sm">
+          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#F9F7F2] leading-[1.1] mb-5 sm:mb-6 drop-shadow-md">
             {slide.title}
           </h1>
-          <p className="font-body text-[#F9F7F2]/80 text-base md:text-lg leading-relaxed mb-10">
+          <p className="font-body text-[#F9F7F2]/80 text-sm sm:text-base md:text-lg leading-relaxed mb-8 sm:mb-10 max-w-md mx-auto lg:mx-0">
             {slide.description}
           </p>
-          <div className="flex flex-wrap gap-5">
+          <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
             <Link
               to={slide.link}
-              className="bg-[#BC9B70] text-[#14213d] px-8 py-3.5 rounded-sm font-semibold hover:bg-[#a6865c] transition-all flex items-center group shadow-md"
+              className="bg-[#BC9B70] text-[#14213d] px-7 sm:px-8 py-3.5 rounded-sm font-semibold hover:bg-[#a6865c] transition-all flex items-center group shadow-md"
             >
               {slide.cta}
               <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1.5 transition-transform" />
@@ -87,8 +87,8 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Slide Navigation - Left Side Bottom */}
-        <div className="absolute bottom-12 left-8 sm:left-12 lg:left-20 xl:left-28 z-20">
+        {/* Slide Navigation */}
+        <div className="absolute bottom-8 lg:bottom-12 left-0 right-0 lg:left-20 xl:left-28 lg:right-auto z-20 flex justify-center lg:justify-start px-6 lg:px-0">
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-3">
               {heroSlides.map((_, i) => (
@@ -122,8 +122,8 @@ export default function HeroSection() {
       </div>
 
       {/* Right Image Side */}
-      <div className="lg:w-[55%] w-full h-[50vh] lg:h-screen relative z-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#14213d] via-[#14213d]/50 to-transparent z-10 pointer-events-none" />
+      <div className="absolute inset-0 lg:relative lg:w-[55%] w-full h-[100svh] lg:h-screen z-0">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#14213d]/40 via-[#14213d]/60 to-[#14213d] lg:bg-gradient-to-r lg:from-[#14213d] lg:via-[#14213d]/50 lg:to-transparent z-10 pointer-events-none" />
         {heroSlides.map((s, i) => (
           <div
             key={i}
