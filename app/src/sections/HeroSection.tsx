@@ -58,100 +58,82 @@ export default function HeroSection() {
   const slide = heroSlides[currentSlide];
 
   return (
-    <section className="relative w-full h-screen min-h-[700px] bg-navy overflow-hidden">
-      {/* Particle Background */}
-      <ParticleField />
-
-      {/* Background Images */}
-      {heroSlides.map((s, i) => (
-        <div
-          key={i}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            i === currentSlide ? 'opacity-40' : 'opacity-0'
-          }`}
-        >
-          <img
-            src={s.image}
-            alt=""
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/80 to-navy/40" />
+    <section className="relative w-full min-h-screen flex flex-col lg:flex-row overflow-hidden bg-[#F9F7F2]">
+      {/* Left Content Side */}
+      <div className="lg:w-[45%] w-full relative z-10 flex flex-col justify-center px-8 sm:px-12 lg:px-20 xl:px-28 py-20 lg:py-0">
+        <div key={currentSlide} className="animate-fade-in-up max-w-xl">
+          <p className="font-body text-[#BC9B70] text-sm md:text-sm font-bold tracking-[0.25em] uppercase mb-6">
+            {slide.subtitle}
+          </p>
+          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-[#14213d] leading-[1.1] mb-6">
+            {slide.title}
+          </h1>
+          <p className="font-body text-[#14213d]/70 text-base md:text-lg leading-relaxed mb-10">
+            {slide.description}
+          </p>
+          <div className="flex flex-wrap gap-5">
+            <Link
+              to={slide.link}
+              className="bg-[#14213d] text-[#F9F7F2] px-8 py-3.5 rounded-sm font-medium hover:bg-[#14213d]/90 transition-all flex items-center group shadow-md"
+            >
+              {slide.cta}
+              <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-1.5 transition-transform" />
+            </Link>
+          </div>
         </div>
-      ))}
 
-      {/* Content */}
-      <div className="relative z-10 h-full flex items-center section-padding">
-        <div className="max-w-3xl">
-          <div
-            key={currentSlide}
-            className="animate-fade-in-up"
-          >
-            <p className="font-body text-gold text-sm md:text-base font-medium tracking-[0.3em] uppercase mb-4">
-              {slide.subtitle}
-            </p>
-            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-semibold text-cream leading-[1.05] mb-6">
-              {slide.title}
-            </h1>
-            <p className="font-body text-cream/70 text-base md:text-lg leading-relaxed max-w-xl mb-8">
-              {slide.description}
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link
-                to={slide.link}
-                className="btn-gold group"
+        {/* Slide Navigation - Left Side Bottom */}
+        <div className="absolute bottom-12 left-8 sm:left-12 lg:left-20 xl:left-28 z-20">
+          <div className="flex items-center gap-6">
+            <div className="flex items-center gap-3">
+              {heroSlides.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => goToSlide(i)}
+                  className={`h-[3px] rounded-sm transition-all duration-500 ${
+                    i === currentSlide
+                      ? 'w-10 bg-[#BC9B70]'
+                      : 'w-5 bg-[#14213d]/20 hover:bg-[#14213d]/40'
+                  }`}
+                />
+              ))}
+            </div>
+            <div className="flex gap-2">
+              <button
+                onClick={prevSlide}
+                className="w-10 h-10 rounded-full border border-[#14213d]/10 flex items-center justify-center text-[#14213d]/60 hover:text-[#BC9B70] hover:border-[#BC9B70] transition-colors"
               >
-                {slide.cta}
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/country/morocco"
-                className="btn-outline border-cream/30 text-cream hover:bg-cream hover:text-navy"
+                <ChevronLeft className="w-4 h-4" />
+              </button>
+              <button
+                onClick={nextSlide}
+                className="w-10 h-10 rounded-full border border-[#14213d]/10 flex items-center justify-center text-[#14213d]/60 hover:text-[#BC9B70] hover:border-[#BC9B70] transition-colors"
               >
-                View Morocco Box
-              </Link>
+                <ChevronRight className="w-4 h-4" />
+              </button>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Slide Navigation */}
-      <div className="absolute bottom-12 left-0 right-0 z-20 section-padding">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            {heroSlides.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => goToSlide(i)}
-                className={`h-1 rounded-full transition-all duration-500 ${
-                  i === currentSlide
-                    ? 'w-10 bg-gold'
-                    : 'w-5 bg-cream/30 hover:bg-cream/50'
-                }`}
-              />
-            ))}
+      {/* Right Image Side */}
+      <div className="lg:w-[55%] w-full h-[50vh] lg:h-screen relative clip-path-slant bg-[#14213d]">
+        <ParticleField />
+        {heroSlides.map((s, i) => (
+          <div
+            key={i}
+            className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
+              i === currentSlide ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
+            }`}
+          >
+            <img
+              src={s.image}
+              alt={s.title}
+              className="w-full h-full object-cover opacity-90"
+            />
+            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-[#14213d]/60 mix-blend-multiply" />
           </div>
-          <div className="flex items-center gap-2">
-            <button
-              onClick={prevSlide}
-              className="w-10 h-10 rounded-full border border-cream/20 flex items-center justify-center text-cream/60 hover:text-gold hover:border-gold transition-all"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
-            <button
-              onClick={nextSlide}
-              className="w-10 h-10 rounded-full border border-cream/20 flex items-center justify-center text-cream/60 hover:text-gold hover:border-gold transition-all"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20">
-        <div className="w-6 h-10 rounded-full border border-cream/30 flex items-start justify-center p-2">
-          <div className="w-1 h-2 bg-gold rounded-full animate-bounce" />
-        </div>
+        ))}
       </div>
     </section>
   );
