@@ -58,26 +58,31 @@ export default function HeroSection() {
   const slide = heroSlides[currentSlide];
 
   return (
-    <section className="relative w-full min-h-screen flex flex-col lg:flex-row overflow-hidden bg-[#F9F7F2]">
+    <section className="relative w-full min-h-screen flex flex-col lg:flex-row overflow-hidden bg-[#14213d]">
+      {/* Particle Background behind everything */}
+      <div className="absolute inset-0 z-0">
+        <ParticleField />
+      </div>
+
       {/* Left Content Side */}
-      <div className="lg:w-[45%] w-full relative z-10 flex flex-col justify-center px-8 sm:px-12 lg:px-20 xl:px-28 py-20 lg:py-0">
+      <div className="lg:w-[45%] w-full relative z-10 flex flex-col justify-center px-8 sm:px-12 lg:px-20 xl:px-28 py-20 lg:py-0 mt-16 lg:mt-0">
         <div key={currentSlide} className="animate-fade-in-up max-w-xl">
           <p className="font-body text-[#BC9B70] text-sm md:text-sm font-bold tracking-[0.25em] uppercase mb-6">
             {slide.subtitle}
           </p>
-          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-[#14213d] leading-[1.1] mb-6">
+          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-[#F9F7F2] leading-[1.1] mb-6 drop-shadow-sm">
             {slide.title}
           </h1>
-          <p className="font-body text-[#14213d]/70 text-base md:text-lg leading-relaxed mb-10">
+          <p className="font-body text-[#F9F7F2]/80 text-base md:text-lg leading-relaxed mb-10">
             {slide.description}
           </p>
           <div className="flex flex-wrap gap-5">
             <Link
               to={slide.link}
-              className="bg-[#14213d] text-[#F9F7F2] px-8 py-3.5 rounded-sm font-medium hover:bg-[#14213d]/90 transition-all flex items-center group shadow-md"
+              className="bg-[#BC9B70] text-[#14213d] px-8 py-3.5 rounded-sm font-semibold hover:bg-[#a6865c] transition-all flex items-center group shadow-md"
             >
               {slide.cta}
-              <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-1.5 transition-transform" />
+              <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1.5 transition-transform" />
             </Link>
           </div>
         </div>
@@ -93,7 +98,7 @@ export default function HeroSection() {
                   className={`h-[3px] rounded-sm transition-all duration-500 ${
                     i === currentSlide
                       ? 'w-10 bg-[#BC9B70]'
-                      : 'w-5 bg-[#14213d]/20 hover:bg-[#14213d]/40'
+                      : 'w-5 bg-[#F9F7F2]/20 hover:bg-[#F9F7F2]/40'
                   }`}
                 />
               ))}
@@ -101,13 +106,13 @@ export default function HeroSection() {
             <div className="flex gap-2">
               <button
                 onClick={prevSlide}
-                className="w-10 h-10 rounded-full border border-[#14213d]/10 flex items-center justify-center text-[#14213d]/60 hover:text-[#BC9B70] hover:border-[#BC9B70] transition-colors"
+                className="w-10 h-10 rounded-full border border-[#F9F7F2]/20 flex items-center justify-center text-[#F9F7F2]/80 hover:text-[#14213d] hover:bg-[#BC9B70] hover:border-[#BC9B70] transition-colors"
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
               <button
                 onClick={nextSlide}
-                className="w-10 h-10 rounded-full border border-[#14213d]/10 flex items-center justify-center text-[#14213d]/60 hover:text-[#BC9B70] hover:border-[#BC9B70] transition-colors"
+                className="w-10 h-10 rounded-full border border-[#F9F7F2]/20 flex items-center justify-center text-[#F9F7F2]/80 hover:text-[#14213d] hover:bg-[#BC9B70] hover:border-[#BC9B70] transition-colors"
               >
                 <ChevronRight className="w-4 h-4" />
               </button>
@@ -117,8 +122,8 @@ export default function HeroSection() {
       </div>
 
       {/* Right Image Side */}
-      <div className="lg:w-[55%] w-full h-[50vh] lg:h-screen relative clip-path-slant bg-[#14213d]">
-        <ParticleField />
+      <div className="lg:w-[55%] w-full h-[50vh] lg:h-screen relative z-0">
+        <div className="absolute inset-0 bg-gradient-to-r from-[#14213d] via-[#14213d]/50 to-transparent z-10 pointer-events-none" />
         {heroSlides.map((s, i) => (
           <div
             key={i}
@@ -129,9 +134,10 @@ export default function HeroSection() {
             <img
               src={s.image}
               alt={s.title}
-              className="w-full h-full object-cover opacity-90"
+              className="w-full h-full object-cover lg:object-left"
             />
-            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-[#14213d]/60 mix-blend-multiply" />
+            {/* Soft overlay to blend image better with the dark background */}
+            <div className="absolute inset-0 bg-[#14213d]/20 mix-blend-multiply" />
           </div>
         ))}
       </div>
