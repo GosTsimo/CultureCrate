@@ -57,6 +57,7 @@ export default function HeroSection() {
 
   const slide = heroSlides[currentSlide];
 
+  
   return (
     <section className="relative w-full min-h-[100svh] flex flex-col lg:flex-row overflow-hidden bg-[#14213d]">
       {/* Particle Background behind everything */}
