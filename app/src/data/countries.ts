@@ -78,7 +78,7 @@ export const countries: CountryData[] = [
     flag: 'MX',
     tagline: 'Vibrant Colors, Rich Traditions',
     description: 'Experience the warmth of Mexico with artisan pottery, authentic spices, and the festive spirit of a culture that celebrates life every day.',
-    heroImage: '/gallery/box-mexico-1.jpg',
+    heroImage: '/MEXICO.png',
     galleryImages: [
       '/gallery/box-mexico-1.jpg',
       '/gallery/box-mexico-2.jpg',
@@ -113,7 +113,7 @@ export const countries: CountryData[] = [
     flag: 'PE',
     tagline: 'From the Heights of the Andes',
     description: 'Journey through Peru with soft alpaca textiles, ancient superfoods, and artisan crafts inspired by the majestic Andes mountains.',
-    heroImage: '/gallery/box-peru-1.jpg',
+    heroImage: '/PERU.png',
     galleryImages: [
       '/gallery/box-peru-1.jpg',
       '/gallery/box-peru-2.jpg',
@@ -148,7 +148,7 @@ export const countries: CountryData[] = [
     flag: 'CN',
     tagline: 'Elegant Oriental Luxury',
     description: 'Uncover the refined beauty of China with Yixing teaware, silk artistry, and the timeless traditions of the Middle Kingdom.',
-    heroImage: '/gallery/box-china-1.jpg',
+    heroImage: '/CHINA.png',
     galleryImages: [
       '/gallery/box-china-1.jpg',
       '/gallery/box-china-2.jpg',
@@ -183,7 +183,7 @@ export const countries: CountryData[] = [
     flag: 'IT',
     tagline: 'La Dolce Vita in a Box',
     description: 'Savor the Italian way of life with artisan olive oils, hand-painted ceramics, and the timeless elegance of Renaissance craftsmanship.',
-    heroImage: '/gallery/box-italy-1.jpg',
+    heroImage: '/ITALY.png',
     galleryImages: [
       '/gallery/box-italy-1.jpg',
       '/gallery/box-italy-2.jpg',
