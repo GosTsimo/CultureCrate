@@ -40,7 +40,7 @@ export const countries: CountryData[] = [
     flag: 'MA',
     tagline: 'A Curated Journey Through Rich Traditions',
     description: 'Discover the magic of Morocco through handcrafted treasures, aromatic spices, and centuries-old artisan techniques passed down through generations.',
-    heroImage: '/morocco-hero.jpg',
+    heroImage: '/MOROCCO.png',
     galleryImages: [
       '/gallery/box-morocco-1.jpg',
       '/gallery/box-morocco-2.jpg',
