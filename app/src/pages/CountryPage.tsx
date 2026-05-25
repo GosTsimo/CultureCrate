@@ -131,7 +131,7 @@ export default function CountryPage() {
 
             <div className="flex flex-wrap gap-4">
               <Link to="/subscribe" className="btn-gold group">
-                Subscribe This Box
+                BUY NOW
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link to="/subscribe" className="btn-outline">

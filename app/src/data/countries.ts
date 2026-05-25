@@ -54,6 +54,7 @@ export const countries: CountryData[] = [
       { name: 'Amazigh Bracelet', description: 'Handmade bracelet inspired by Amazigh art', icon: 'Gem' },
       { name: 'Story Booklet', description: 'Learn about Morocco\'s history and traditions', icon: 'BookOpen' },
       { name: 'QR Experience', description: 'Unlock videos, recipes, music and more', icon: 'QrCode' },
+      { name: 'Discover more', description: 'Explore additional cultural experiences', icon: 'Globe' },
     ],
     culturalExperiences: [
       { title: 'Rich Heritage', description: 'Explore the history, art and traditions.', icon: 'Landmark' },
