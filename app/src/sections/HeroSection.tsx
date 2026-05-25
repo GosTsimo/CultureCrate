@@ -10,7 +10,7 @@ const heroSlides = [
     description: 'Every month, a new culture unfolds. Authentic artisan products, curated stories, and immersive digital experiences delivered to you.',
     cta: 'Explore Our Boxes',
     link: '/subscribe',
-    image: '/gallery/box-morocco-1.jpg',
+    image: '/MEXICO.png',
   },
   {
     title: 'Morocco Edition',
@@ -26,7 +26,7 @@ const heroSlides = [
     description: 'We work directly with local artisans and fair-trade partners to bring you the most authentic cultural experiences.',
     cta: 'Our Story',
     link: '/about',
-    image: '/gallery/box-morocco-4.jpg',
+    image: '/CHINA.png',
   },
 ];
 
