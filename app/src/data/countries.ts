@@ -42,7 +42,7 @@ export const countries: CountryData[] = [
     description: 'Discover the magic of Morocco through handcrafted treasures, aromatic spices, and centuries-old artisan techniques passed down through generations.',
     heroImage: '/MOROCCO.png',
     galleryImages: [
-      '/gallery/box-morocco-1.jpg',
+      '/MOROCCO.png',
       '/gallery/box-morocco-2.jpg',
       '/gallery/box-morocco-3.jpg',
       '/gallery/box-morocco-4.jpg',
@@ -80,7 +80,7 @@ export const countries: CountryData[] = [
     description: 'Experience the warmth of Mexico with artisan pottery, authentic spices, and the festive spirit of a culture that celebrates life every day.',
     heroImage: '/MEXICO.png',
     galleryImages: [
-      '/gallery/box-mexico-1.jpg',
+      '/MEXICO.png',
       '/gallery/box-mexico-2.jpg',
       '/gallery/box-mexico-3.jpg',
     ],
@@ -116,7 +116,7 @@ export const countries: CountryData[] = [
     description: 'Journey through Peru with soft alpaca textiles, ancient superfoods, and artisan crafts inspired by the majestic Andes mountains.',
     heroImage: '/PERU.png',
     galleryImages: [
-      '/gallery/box-peru-1.jpg',
+      '/PERU.png',
       '/gallery/box-peru-2.jpg',
       '/gallery/box-peru-3.jpg',
     ],
@@ -152,7 +152,7 @@ export const countries: CountryData[] = [
     description: 'Uncover the refined beauty of China with Yixing teaware, silk artistry, and the timeless traditions of the Middle Kingdom.',
     heroImage: '/CHINA.png',
     galleryImages: [
-      '/gallery/box-china-1.jpg',
+      '/CHINA.png',
       '/gallery/box-china-2.jpg',
       '/gallery/box-china-3.jpg',
     ],
@@ -188,7 +188,7 @@ export const countries: CountryData[] = [
     description: 'Savor the Italian way of life with artisan olive oils, hand-painted ceramics, and the timeless elegance of Renaissance craftsmanship.',
     heroImage: '/ITALY.png',
     galleryImages: [
-      '/gallery/box-italy-1.jpg',
+      '/ITALY.png',
       '/gallery/box-italy-2.jpg',
       '/gallery/box-italy-3.jpg',
     ],
@@ -219,16 +219,16 @@ export const countries: CountryData[] = [
 ];
 
 export const galleryImages = [
-  '/gallery/box-morocco-1.jpg',
+  '/MOROCCO.png',
   '/gallery/box-morocco-2.jpg',
   '/gallery/box-morocco-3.jpg',
-  '/gallery/box-mexico-1.jpg',
+  '/MEXICO.png',
   '/gallery/box-mexico-2.jpg',
   '/gallery/box-mexico-3.jpg',
-  '/gallery/box-peru-1.jpg',
+  '/PERU.png',
   '/gallery/box-peru-2.jpg',
   '/gallery/box-peru-3.jpg',
-  '/gallery/box-china-1.jpg',
+  '/CHINA.png',
   '/gallery/box-china-2.jpg',
   '/gallery/box-china-3.jpg',
 ];
