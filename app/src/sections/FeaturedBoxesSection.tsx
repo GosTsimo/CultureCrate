@@ -114,7 +114,7 @@ export default function FeaturedBoxesSection() {
                     <span className="font-display text-2xl text-navy font-semibold">
                       ${country.price}
                     </span>
-                    <span className="font-body text-navy/40 text-xs ml-1">/mo</span>
+                    
                   </div>
                   <Link
                     to={`/country/${country.id}`}
