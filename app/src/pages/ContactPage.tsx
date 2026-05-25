@@ -14,6 +14,7 @@ export default function ContactPage() {
     e.preventDefault();
     setSubmitted(true);
   };
+  
 
   return (
     <div className="bg-cream min-h-screen pt-24 pb-16">
