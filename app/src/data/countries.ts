@@ -89,6 +89,7 @@ export const countries: CountryData[] = [
       { name: 'Mexican Hot Chocolate', description: 'Traditional chocolate with cinnamon', icon: 'Coffee' },
       { name: 'Embroidered Textile', description: 'Hand-stitched textile art piece', icon: 'Scissors' },
       { name: 'Mezcal Miniature', description: 'Artisanal mezcal tasting bottle', icon: 'Wine' },
+      { name: 'Discover more', description: 'Explore additional cultural experiences', icon: 'Globe' },
       { name: 'Papel Picado', description: 'Decorative paper banner craft', icon: 'Flag' },
     ],
     culturalExperiences: [
@@ -124,6 +125,7 @@ export const countries: CountryData[] = [
       { name: 'Cusco Ceramic', description: 'Traditional hand-painted ceramic cup', icon: 'Palette' },
       { name: 'Quinoa Grains', description: 'Organic Andean quinoa variety', icon: 'Wheat' },
       { name: 'Maca Powder', description: 'Ancient Peruvian superfood', icon: 'Heart' },
+      { name: 'Discover more', description: 'Explore additional cultural experiences', icon: 'Globe' },
       { name: 'Llama Figurine', description: 'Hand-carved wooden llama keepsake', icon: 'ToyBrick' },
     ],
     culturalExperiences: [
@@ -159,6 +161,7 @@ export const countries: CountryData[] = [
       { name: 'Silk Pouch', description: 'Embroidered silk drawstring bag', icon: 'Scissors' },
       { name: 'Calligraphy Set', description: 'Traditional brush and ink tools', icon: 'PenTool' },
       { name: 'Pu-erh Tea', description: 'Aged fermented tea cake', icon: 'Leaf' },
+      { name: 'Discover more', description: 'Explore additional cultural experiences', icon: 'Globe' },
       { name: 'Red Envelope', description: 'Decorative hongbao with gold detail', icon: 'Gift' },
     ],
     culturalExperiences: [
@@ -195,6 +198,7 @@ export const countries: CountryData[] = [
       { name: 'Artisan Pasta', description: 'Traditional dried pasta bundle', icon: 'Wheat' },
       { name: 'Balsamic Vinegar', description: 'Aged Modena balsamic vinegar', icon: 'FlaskConical' },
       { name: 'Leather Journal', description: 'Florentine leather-bound notebook', icon: 'BookOpen' },
+      { name: 'Discover more', description: 'Explore additional cultural experiences', icon: 'Globe' },
     ],
     culturalExperiences: [
       { title: 'Renaissance Art', description: 'The birthplace of Western art.', icon: 'Landmark' },
