@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Globe } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const navLinks = [
   { label: 'Home', path: '/' },
@@ -43,7 +43,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <Globe className={`w-6 h-6 transition-colors duration-300 ${showSolid ? 'text-gold' : 'text-gold'}`} />
+            <img 
+              src="/logo/blue.png" 
+              alt="CultureCrate Logo" 
+              className="w-10 h-10 object-contain" 
+            />
             <span className={`font-display text-xl md:text-2xl font-semibold tracking-wide transition-colors duration-300 ${showSolid ? 'text-navy' : 'text-cream'}`}>
               CultureCrate
             </span>
