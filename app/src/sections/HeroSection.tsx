@@ -18,7 +18,7 @@ const heroSlides = [
     description: 'A curated journey through Morocco\'s rich traditions, flavors, and artisan heritage. From zellige to argan, discover the magic.',
     cta: 'View Morocco Box',
     link: '/country/morocco',
-    image: '/gallery/box-morocco-hero.jpg',
+    image: '/MOROCCO.png',
   },
   {
     title: 'Authentic & Ethical',
